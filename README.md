@@ -1,9 +1,9 @@
-#Handwriting Alphabet Keypad
+# Handwriting Alphabet Keypad
 
 A simple Handwriting Alphabet Keypad made using Real Time Alphabet Recognition using dataset from 'https://www.kaggle.com/tkk233/recognize-hand-written-alphabets/data?scriptVersionId=3758333'
 pygame and tkinter are used for GUI.
 cv2 is used for image processing (converting RGB to Greyscale)
-#Instructions:
+# Instructions:
 * Run the script
 * Write your alphabet in capitals on the pygame black Drawing Pad.
 * Wait a second or so, the alphabet appears on the tkinter text pad.
