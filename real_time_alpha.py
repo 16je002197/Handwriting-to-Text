@@ -94,7 +94,6 @@ black = (0,0,0) # RGB
 white = (255,255,255)
 
 #=================tKinter part=================================================
-textExists = True
 textWidth, textHeight = 400,200
 root = tk.Tk()
 root.title('Text Box')
@@ -103,11 +102,6 @@ root.maxsize(width=textWidth,height=textHeight)
 text = tk.Text(root,width=textWidth,height=textHeight)
 text.pack()
 
-def callback():
-    root.destroy()
-    textExists = False
-
-root.protocol("WM_DELETE_WINDOW", callback)
 
 root.update()
 
@@ -142,6 +136,12 @@ def message_display(text, locx, locy,size):
 def resetScreen(gameDisplay):
     gameDisplay.fill(black)
     pygame.display.flip()
+
+def saveText():
+    t = text.get(0.0, tk.END)
+    f = open('output.txt','w')
+    f.write(t)
+    f.close()
     
 def gameLoop():
     gameExit = False
@@ -151,7 +151,6 @@ def gameLoop():
     RMBDown = False
     MMBDown = False
     while not gameExit:
-        if not textExists: break
         if tock - tick >= 1 and startDraw:
             predVal = alphaPredict(gameDisplay)
             gameDisplay.fill(black)
@@ -195,5 +194,6 @@ def gameLoop():
         root.update()
             
 gameLoop()
+saveText()
 root.destroy()   
 pygame.quit()
