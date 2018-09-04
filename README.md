@@ -11,10 +11,9 @@ cv2 is used for image processing (converting RGB to Greyscale)
 * Press Right Mouse Button to delete the last alphabet (works as backspace)
 * You can copy the text from the textpad GUI or, when you are done writing, exit the pygame application and you can find the output in output.txt
 
-##Example:
-* Scratch Pad:
+## Scratch Pad:
 ![alt text](./example/1.gif "The Drawing Pad")
 
-* Text Pad (tkinter):
+## Text Pad (tkinter):
 ![alt text](./example/2.gif "The Text Pad")
 
